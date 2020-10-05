@@ -2,7 +2,6 @@
 
 // initialize state
 
-import { pokemon } from './obj-data.js';
 /*
 
 <h2>Mr. Cruel</h2>
@@ -23,6 +22,8 @@ export function renderPokemon(pokemon) {
     const price = document.createElement('p');
     const button = document.createElement('button');
 
+    product.classList.add("product");
+
     name.textContent = pokemon.name;
     product.appendChild(name);
 
@@ -37,6 +38,7 @@ export function renderPokemon(pokemon) {
     product.appendChild(price);
 
     button.textContent = "Add to Cart";
+    button.value = pokemon.id;
     product.appendChild(button);
 
     return product;
