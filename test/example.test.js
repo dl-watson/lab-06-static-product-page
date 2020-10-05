@@ -8,7 +8,7 @@ test('should take in a pokemon and return an li with the appropariate contents',
     const pokemon = {
         id: 'mrcruel',
         name: 'Mr. Cruel',
-        image: './assets/mrcruel.png',
+        image: '../assets/mrcruel.png',
         description: 'fusion of Mr. Mime and Tentacruel',
         category: 'pokemon',
         price: 12.99

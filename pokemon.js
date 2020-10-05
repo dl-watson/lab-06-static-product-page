@@ -9,7 +9,7 @@ export const pokemon = [
     {
         id: 'butterduck',
         name: 'Butterduck',
-        image: './assets/butterduck.png',
+        image: '../assets/butterduck.png',
         description: 'fusion of Butterfree and Psyduck',
         category: 'pokemon',
         price: 4.99
@@ -17,7 +17,7 @@ export const pokemon = [
     {
         id: 'chanchoke',
         name: 'Chanchoke',
-        image: './assets/chanchoke.png',
+        image: '../assets/chanchoke.png',
         description: 'fusion of Chansey and Machoke',
         category: 'pokemon',
         price: 5.99
@@ -25,7 +25,7 @@ export const pokemon = [
     {
         id: 'mrcruel',
         name: 'Mr. Cruel',
-        image: './assets/mrcruel.png',
+        image: '.../assets/mrcruel.png',
         description: 'fusion of Mr. Mime and Tentacruel',
         category: 'pokemon',
         price: 12.99
@@ -33,7 +33,7 @@ export const pokemon = [
     {
         id: 'slowlithe',
         name: 'Slowlithe',
-        image: './assets/slowlithe.png',
+        image: '../assets/slowlithe.png',
         description: 'fusion of Slowpoke and Growlithe',
         category: 'pokemon',
         price: 1.99
@@ -41,7 +41,7 @@ export const pokemon = [
     {
         id: 'starbok',
         name: 'Starbok',
-        image: './assets/starbok.png',
+        image: '../assets/starbok.png',
         description: 'fusion of Starmie and Arbok',
         category: 'pokemon',
         price: 6.99
@@ -49,7 +49,7 @@ export const pokemon = [
     {
         id: 'weepinduo',
         name: 'Weepinduo',
-        image: './assets/weepinduo.png',
+        image: '../assets/weepinduo.png',
         description: 'fusion of Weepinbell and Doduo',
         category: 'pokemon',
         price: 0.99

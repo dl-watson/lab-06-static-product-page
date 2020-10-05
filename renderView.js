@@ -30,7 +30,7 @@ export function renderPokemon(pokemon) {
     description.textContent = pokemon.description;
     product.appendChild(description);
 
-    image.src = `./assets/${pokemon.id}.png`;
+    image.src = `../assets/${pokemon.id}.png`;
     image.alt = pokemon.id;
     product.appendChild(image);
 

@@ -116,7 +116,7 @@ footer {
 
 }
 
-/* .product {
+.product {
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -124,9 +124,9 @@ footer {
     margin: 10px;
     background-color: var(--yellow);
 }
-} */
+}
 
-/* p > img {
+p > img {
     height: 200px;
     width: 100px;
 }
@@ -154,6 +154,4 @@ button {
 .heading {
     display: flex;
     justify-content: center;
-} */
-
-/* new home page,  */
+}
