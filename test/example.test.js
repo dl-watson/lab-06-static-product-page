@@ -14,7 +14,7 @@ test('should take in a pokemon and return an li with the appropariate contents',
         price: 12.99
     };
 
-    const expected = `<div class="product"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src="./assets/mrcruel.png" alt="mrcruel"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button></div>`;
+    const expected = `<div class="product"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src="../assets/mrcruel.png" alt="mrcruel"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button></div>`;
 
     const actual = renderPokemon(pokemon);
 
