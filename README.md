@@ -1,0 +1,1 @@
+# lab-06-static-product-page
