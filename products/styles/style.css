@@ -47,7 +47,7 @@ section {
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
+    /* margin-bottom: var(--gutter); */
     /* border: solid 4px var(--red); */
 }
 
@@ -154,4 +154,8 @@ button {
 .heading {
     display: flex;
     justify-content: center;
+}
+
+.product > p {
+    margin: 5px;
 }

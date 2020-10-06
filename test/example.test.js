@@ -4,7 +4,7 @@ import { renderPokemon } from '../renderView.js';
 const test = QUnit.test;
 
 
-test('should take in a pokemon and return an li with the appropariate contents', (expect) => {
+test('should take in a pokemon and return an li with the appropriate contents', (expect) => {
     const pokemon = {
         id: 'mrcruel',
         name: 'Mr. Cruel',

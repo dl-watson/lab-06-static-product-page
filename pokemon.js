@@ -39,10 +39,10 @@ export const pokemon = [
         price: 1.99
     },
     {
-        id: 'starbok',
-        name: 'Starbok',
-        image: '../assets/starbok.png',
-        description: 'fusion of Starmie and Arbok',
+        id: 'wigglywrath',
+        name: 'Wigglywrath',
+        image: '../assets/wigglywrath.png',
+        description: 'fusion of Wigglytuff and Poliwrath',
         category: 'pokemon',
         price: 6.99
     },
