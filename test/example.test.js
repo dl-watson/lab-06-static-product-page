@@ -1,18 +1,22 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { renderPokemon } from '../renderView.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = false;
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+test('should take in a pokemon and return an li with the appropriate contents', (expect) => {
+    const pokemon = {
+        id: 'mrcruel',
+        name: 'Mr. Cruel',
+        image: '../assets/mrcruel.png',
+        description: 'fusion of Mr. Mime and Tentacruel',
+        category: 'pokemon',
+        price: 12.99
+    };
+
+    const expected = `<div class="product"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src="../assets/mrcruel.png" alt="mrcruel"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button></div>`;
+
+    const actual = renderPokemon(pokemon);
+
+    expect.equal(actual.outerHTML, expected);
 });
