@@ -5,6 +5,7 @@ export function calcLineItem(quantity, amount) {
     return Math.round(result * 100) / 100;
 }
 
+// 
 
 export function findById(givenArray, givenId) {
 
@@ -17,6 +18,7 @@ export function findById(givenArray, givenId) {
     }
 }
 
+//
 
 export function renderPokemon(pokemon) {
 
@@ -40,7 +42,7 @@ export function renderPokemon(pokemon) {
     image.alt = pokemon.id;
     product.appendChild(image);
 
-    price.textContent = `$${pokemon.price.toFixed(2)}`
+    price.textContent = `$${pokemon.price.toFixed(2)}`;
     product.appendChild(price);
 
     button.textContent = 'Add to Cart';

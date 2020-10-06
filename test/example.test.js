@@ -5,6 +5,13 @@ import {
     calcLineItem
 } from '../renderView.js';
 
+import {
+    renderTableRow
+} from '../cart/renderCartView.js';
+
+import {
+    calcOrderTotal
+} from '../cart/cart.js';
 
 const test = QUnit.test;
 
@@ -83,6 +90,57 @@ test('calcLineItem should take in a quantity and a price and return the total', 
 
     const expected = 8;
     const actual = calcLineItem(quantity, price);
+
+    expect.equal(actual, expected);
+});
+
+
+test('renderTableRow should take in a cart line item and returns a populated DOM table element', (expect) => {
+    const cartItem = {
+        id: 'butterduck',
+        quantity: 1
+    };
+
+    const expected = `<tr><td>Butterduck</td><td>$4.99</td><td>1</td><td>$4.99</td></tr>`;
+
+    const actual = renderTableRow(cartItem);
+
+    expect.equal(actual.outerHTML, expected);
+});
+
+
+
+test('calcOrderTotal should take in the cart array and return the total', (expect) => {
+
+    const cart = [
+        {
+            id: 'butterduck',
+            quantity: 1
+        },
+        {
+            id: 'chanchoke',
+            quantity: 1
+        },
+        {
+            id: 'mrcruel',
+            quantity: 2
+        },
+        {
+            id: 'slowlithe',
+            quantity: 3
+        },
+        {
+            id: 'wigglywrath',
+            quantity: 5
+        },
+        {
+            id: 'weepinduo',
+            quantity: 8
+        },
+    ];
+
+    const expected = 85.80;
+    const actual = calcOrderTotal(cart);
 
     expect.equal(actual, expected);
 });
