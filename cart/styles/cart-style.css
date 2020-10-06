@@ -107,34 +107,35 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    /* background-color: var(--yellow) */
-
 }
 
 table {
     width: 100%;
-    border: solid 1px;
+    border: 1px solid var(--jet);
 }
 
 td, th {
-border: solid 1px;
-}
-
-th {
-    background-color: var(--red);
-}
-
-tr:nth-child(odd) {
-    background: pink;
-}
-
-
-.total {
-    text-align: right;
+    border: 1px solid var(--jet);
     padding: 5px;
 }
 
-.unstyle {
-    background-color: white;
-    border: none
+th {
+    background-color: var(--dark-pink);
+    color: var(--offwhite);
+}
+
+tr:nth-child(odd) {
+    background: var(--offwhite);
+}
+
+
+tfoot {
+    text-align: right;
+}
+
+.place-order {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
