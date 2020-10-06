@@ -1,0 +1,32 @@
+
+table {
+    width: 100%;
+    border: 1px solid var(--jet);
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid var(--jet);
+    padding: 5px;
+    /* text-align: center; */
+}
+
+th {
+    background-color: var(--yellow);
+}
+
+tr:nth-child(odd) {
+    background: var(--offwhite);
+}
+
+tr:nth-child(even) {
+    background: lightgrey;
+}
+
+.checkout {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    font-family: 'Titillium Web', sans-serif;
+}

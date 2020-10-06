@@ -74,15 +74,6 @@ test('renderPokemon should take in a pokemon and return an li with the appropria
 });
 
 
-/* 
-Step 4: TDD calcLineItem Function
-TDD for a function that lives in /utils.js called calcLineItem. 
-This function takes quantity and an amount and returns the total. 
-Due to how JavaScript uses floating point numbers, you may need to round 
-the result to two decimal places using: Math.round(amount * 100) / 100
-
-*/
-
 test('calcLineItem should take in a quantity and a price and return the total', (expect) => {
 
     const quantity = 2;
@@ -107,8 +98,6 @@ test('renderTableRow should take in a cart line item and returns a populated DOM
 
     expect.equal(actual.outerHTML, expected);
 });
-
-
 
 test('calcOrderTotal should take in the cart array and return the total', (expect) => {
 
@@ -143,4 +132,4 @@ test('calcOrderTotal should take in the cart array and return the total', (expec
     const actual = calcOrderTotal(cart);
 
     expect.equal(actual, expected);
-})
+});

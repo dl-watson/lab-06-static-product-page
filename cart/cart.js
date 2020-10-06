@@ -20,8 +20,7 @@ for (let i = 0; i < cart.length; i++) {
 
 }
 
-
 const total = calcOrderTotal(cart);
 
 const tdTotal = document.querySelector('#total');
-tdTotal.textContent = `Total: $${total}`;
+tdTotal.textContent = `$${total}`;
