@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles/reset.css"> -->
-    <link rel="stylesheet" href="../cart/styles/cart-style.css">
-    <!-- <link rel="stylesheet" href="styles/home.css"> -->
+    <link rel="stylesheet" href="../styles/cart.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>lab-06-static-CART-PAGE</title>
 </head>
 
@@ -39,21 +39,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
+                            <td>Butterduck</td>
+                            <td>$4.99</td>
                             <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-    
+                            <td>$4.99</td>
+                        </tr> -->
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td class="table-footer" colspan="4">Total $$$</td>
+                            <td colspan="3">Total:</td>
+                            <td class="table-footer" id="total" colspan="3">$$</td>
                         </tr>
                     </tfoot>
                   </table>
-                  <button class="place-order">place order</button>
+                  <button class="checkout">checkout</button>
 
             </section>
         </section>
@@ -62,7 +62,7 @@
         <div class="copy">with gratitude to <a href="https://pokemon.alexonsager.net/">Pokemon Fusion</a> </div>
     </footer>
 
-    <!-- <script type="module" src="../products.js"></script> -->
+    <script type="module" src="./cart.js"></script>
 </body>
 
 </html>
