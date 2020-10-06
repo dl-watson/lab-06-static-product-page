@@ -1,5 +1,9 @@
 // 
 
+export function calcLineItem(quantity, amount) {
+    const result = quantity * amount;
+    return Math.round(result * 100) / 100;
+}
 
 
 export function findById(givenArray, givenId) {
@@ -11,8 +15,8 @@ export function findById(givenArray, givenId) {
             return item;
         }
     }
-
 }
+
 
 export function renderPokemon(pokemon) {
 
