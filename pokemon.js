@@ -54,4 +54,4 @@ export const pokemon = [
         category: 'pokemon',
         price: 0.99
     }
-]
+];

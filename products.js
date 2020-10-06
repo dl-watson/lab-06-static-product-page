@@ -23,7 +23,7 @@ for (let i = 0; i < pokemon.length; i++) {
     const product = renderPokemon(obj);
 
     anchor.appendChild(product);
-};
+}
 
 
 
