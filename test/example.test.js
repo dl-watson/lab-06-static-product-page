@@ -11,7 +11,7 @@ import {
 
 import {
     calcOrderTotal
-} from '../cart/cart.js';
+} from '../cart/cart-utils.js';
 
 const test = QUnit.test;
 
@@ -139,8 +139,8 @@ test('calcOrderTotal should take in the cart array and return the total', (expec
         },
     ];
 
-    const expected = 85.80;
+    const expected = 85.8;
     const actual = calcOrderTotal(cart);
 
     expect.equal(actual, expected);
-});
+})
