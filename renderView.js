@@ -1,16 +1,18 @@
-// import functions and grab DOM elements
+// 
 
-// initialize state
 
-/*
 
-<h2>Mr. Cruel</h2>
-<p>fusion of Mr. Mime and Tentacruel</p>
-<img src="./assets/mrcruel.png" alt="mrcruel">
-<p>$12.99</p>
-<button>Add to Cart</button>
+export function findById(givenArray, givenId) {
 
-*/
+    for (let i = 0; i < givenArray.length; i++) {
+        const item = givenArray[i];
+
+        if (item.id === givenId) {
+            return item;
+        }
+    }
+
+}
 
 export function renderPokemon(pokemon) {
 
@@ -22,7 +24,7 @@ export function renderPokemon(pokemon) {
     const price = document.createElement('p');
     const button = document.createElement('button');
 
-    product.classList.add("product");
+    product.classList.add('product');
 
     name.textContent = pokemon.name;
     product.appendChild(name);
@@ -37,10 +39,10 @@ export function renderPokemon(pokemon) {
     price.textContent = `$${pokemon.price.toFixed(2)}`
     product.appendChild(price);
 
-    button.textContent = "Add to Cart";
+    button.textContent = 'Add to Cart';
     button.value = pokemon.id;
     product.appendChild(button);
 
     return product;
 
-};
+}
