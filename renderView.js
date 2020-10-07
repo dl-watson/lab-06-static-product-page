@@ -1,17 +1,15 @@
-// 
 
 export function calcLineItem(quantity, amount) {
     const result = quantity * amount;
     return Math.round(result * 100) / 100;
 }
 
-// 
+
 
 export function findById(givenArray, givenId) {
     return givenArray.filter(item => item.id === givenId)[0];
 }
 
-//
 
 export function renderPokemon(pokemon) {
 
@@ -43,5 +41,4 @@ export function renderPokemon(pokemon) {
     product.appendChild(button);
 
     return product;
-
 }
