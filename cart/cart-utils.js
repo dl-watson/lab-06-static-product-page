@@ -6,13 +6,12 @@ export function calcOrderTotal(cartArray) {
 
     let total = 0;
 
-    for (let i = 0; i < cartArray.length; i++) {
-        const item = cartArray[i];
-
+    cartArray.forEach(item => {
         const selected = findById(pokemon, item.id);
         const subtotal = calcLineItem(item.quantity, selected.price);
 
         total += subtotal;
-    }
+    });
+
     return total;
 }
