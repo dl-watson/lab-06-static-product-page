@@ -2,7 +2,9 @@
 import {
     renderPokemon,
     findById,
-    calcLineItem
+    calcLineItem,
+    getCart,
+    setCart
 } from '../renderView.js';
 
 import {
@@ -132,4 +134,29 @@ test('calcOrderTotal should take in the cart array and return the total', (expec
     const actual = calcOrderTotal(cart);
 
     expect.equal(actual, expected);
+});
+
+test('getCart and setCart should correctly stringify and set things in local storage', function (assert) {
+
+    //Arrange
+    // Set up your parameters and expectations
+    const sammy = {
+        id: 'meow',
+        weight: 4,
+        color: 'calico'
+    };
+    const key = 'CAT';
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    setCart(key, sammy);
+    const newSammy = getCart(key);
+    const localStorageSammy = JSON.parse(localStorage.getItem(key));
+
+    //Assert
+    // Make assertions about what is expected versus the actual result
+
+    // all three of these (sammy, newSammy, localStorageSammy) should be the same if we did our work right
+    assert.deepEqual(sammy, newSammy);
+    assert.deepEqual(newSammy, localStorageSammy)
 });

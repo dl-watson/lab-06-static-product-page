@@ -1,3 +1,19 @@
+export const _cart = '_cart';
+
+export function getCart(key) {
+    if (key) {
+        return JSON.parse(localStorage.getItem(key));
+    } else {
+        return [];
+        // this isn't a correct fix for the "fall-back"
+    }
+}
+
+export function setCart(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+
+}
+
 
 export function calcLineItem(quantity, amount) {
     const result = quantity * amount;
@@ -39,6 +55,30 @@ export function renderPokemon(pokemon) {
     button.textContent = 'Add to Cart';
     button.value = pokemon.id;
     product.appendChild(button);
+
+
+    button.addEventListener("click", () => {
+
+        console.log(`You clicked on: ${pokemon.name}`);
+
+        const cart = getCart(_cart) || [];
+
+        const selectedProduct = findById(cart, pokemon.id);
+
+        if (selectedProduct === undefined) {
+            const addProduct = {
+                id: pokemon.id,
+                quantity: 1
+            };
+            cart.push(addProduct);
+        } else {
+            selectedProduct.quantity++;
+        }
+
+        // save modified array to localStorage using our utility function
+        setCart(_cart, cart);
+    });
+
 
     return product;
 }
