@@ -8,14 +8,7 @@ export function calcLineItem(quantity, amount) {
 // 
 
 export function findById(givenArray, givenId) {
-
-    for (let i = 0; i < givenArray.length; i++) {
-        const item = givenArray[i];
-
-        if (item.id === givenId) {
-            return item;
-        }
-    }
+    return givenArray.filter(item => item.id === givenId)[0];
 }
 
 //
