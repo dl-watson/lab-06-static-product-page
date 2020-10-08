@@ -9,38 +9,42 @@ export function renderTableRow(cartItem) {
     const tdItem = document.createElement('td');
     const tdPrice = document.createElement('td');
     const tdSubtotal = document.createElement('td');
-
     const selectQuantity = document.createElement('select');
 
+    // select each item in the cart (renderTableRow will run once for each object in our cart)
     const selected = findById(pokemon, cartItem.id);
 
+    // mutate each line item to populate our table
     const item = selected.name;
     tdItem.textContent = item;
 
     const price = selected.price.toFixed(2);
     tdPrice.textContent = `$${price}`;
 
+    // for peace of mind
     console.log(cartItem.quantity);
 
-    // create options
+    // create options and append to select (populate dropdown)
     for (let i = 1; i < 20; i++) {
         const select = document.createElement('option');
         select.text = i;
         selectQuantity.appendChild(select);
     }
 
-    // set default value for select field
+    // set default value for select field to the quantity selected on the products page
     selectQuantity.value = cartItem.quantity;
 
-    // total upon initialization
+    // total (price * quantity) per line item upon initialization
     const total = price * cartItem.quantity;
     tdSubtotal.textContent = `$${total.toFixed(2)}`;
 
     // create a change listener for the select field
     selectQuantity.addEventListener('change', (e) => {
 
+        // e.target.value is the selected option
         const quantity = e.target.value;
-        // mutated total
+
+        // mutated total, using e.target.value
         const total = price * quantity;
         tdSubtotal.textContent = `$${total.toFixed(2)}`;
 
@@ -60,6 +64,7 @@ export function renderTableRow(cartItem) {
         tdTotal.textContent = `$${calcTotal}`;
     });
 
+    // append all mutated DOM nodes in the appropriate order
     tr.append(tdItem, tdPrice, selectQuantity, tdSubtotal);
 
     return tr;
