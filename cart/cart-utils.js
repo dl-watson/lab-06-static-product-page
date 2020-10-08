@@ -13,5 +13,5 @@ export function calcOrderTotal(cartArray) {
         total += subtotal;
     });
 
-    return total;
+    return total.toFixed(2);
 }

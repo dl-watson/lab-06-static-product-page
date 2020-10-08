@@ -2,10 +2,13 @@
 import {
     renderPokemon,
     findById,
-    calcLineItem,
+    calcLineItem
+} from '../renderView.js';
+
+import {
     getCart,
     setCart
-} from '../renderView.js';
+} from '../cart/cart-api.js';
 
 import {
     renderTableRow
@@ -68,8 +71,7 @@ test('renderPokemon should take in a pokemon and return an li with the appropria
         price: 12.99
     };
 
-    const expected = `<div class="product"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src="../assets/mrcruel.png" alt="mrcruel"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button></div>`;
-
+    const expected = `<div class=\"product\"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src=\"../assets/mrcruel.png\" alt=\"mrcruel\"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button><p>0 selected</p></div>`;
     const actual = renderPokemon(pokemon);
 
     expect.equal(actual.outerHTML, expected);
@@ -94,7 +96,7 @@ test('renderTableRow should take in a cart line item and returns a populated DOM
         quantity: 1
     };
 
-    const expected = `<tr><td>Butterduck</td><td>$4.99</td><td>1</td><td>$4.99</td></tr>`;
+    const expected = `<tr><td>Butterduck</td><td>$4.99</td><select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select><td>$4.99</td></tr>`;
 
     const actual = renderTableRow(cartItem);
 
