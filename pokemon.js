@@ -57,29 +57,29 @@ export const pokemon = [
 ];
 
 
-export const cart = [
-    {
-        id: 'butterduck',
-        quantity: 1
-    },
-    {
-        id: 'chanchoke',
-        quantity: 1
-    },
-    {
-        id: 'mrcruel',
-        quantity: 2
-    },
-    {
-        id: 'slowlithe',
-        quantity: 3
-    },
-    {
-        id: 'wigglywrath',
-        quantity: 5
-    },
-    {
-        id: 'weepinduo',
-        quantity: 8
-    },
-];
+// export const cart = [
+//     {
+//         id: 'butterduck',
+//         quantity: 1
+//     },
+//     {
+//         id: 'chanchoke',
+//         quantity: 1
+//     },
+//     {
+//         id: 'mrcruel',
+//         quantity: 2
+//     },
+//     {
+//         id: 'slowlithe',
+//         quantity: 3
+//     },
+//     {
+//         id: 'wigglywrath',
+//         quantity: 5
+//     },
+//     {
+//         id: 'weepinduo',
+//         quantity: 8
+//     },
+// ];

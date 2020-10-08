@@ -6,6 +6,11 @@ import {
 } from '../renderView.js';
 
 import {
+    getCart,
+    setCart
+} from '../cart/cart-api.js';
+
+import {
     renderTableRow
 } from '../cart/renderCartView.js';
 
@@ -66,8 +71,7 @@ test('renderPokemon should take in a pokemon and return an li with the appropria
         price: 12.99
     };
 
-    const expected = `<div class="product"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src="../assets/mrcruel.png" alt="mrcruel"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button></div>`;
-
+    const expected = `<div class=\"product\"><h2>Mr. Cruel</h2><p>fusion of Mr. Mime and Tentacruel</p><img src=\"../assets/mrcruel.png\" alt=\"mrcruel\"><p>$12.99</p><button value=\"mrcruel\">Add to Cart</button><p>0 selected</p></div>`;
     const actual = renderPokemon(pokemon);
 
     expect.equal(actual.outerHTML, expected);
@@ -92,7 +96,7 @@ test('renderTableRow should take in a cart line item and returns a populated DOM
         quantity: 1
     };
 
-    const expected = `<tr><td>Butterduck</td><td>$4.99</td><td>1</td><td>$4.99</td></tr>`;
+    const expected = `<tr><td>Butterduck</td><td>$4.99</td><select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select><td>$4.99</td></tr>`;
 
     const actual = renderTableRow(cartItem);
 
@@ -132,4 +136,29 @@ test('calcOrderTotal should take in the cart array and return the total', (expec
     const actual = calcOrderTotal(cart);
 
     expect.equal(actual, expected);
+});
+
+test('getCart and setCart should correctly stringify and set things in local storage', function (assert) {
+
+    //Arrange
+    // Set up your parameters and expectations
+    const sammy = {
+        id: 'meow',
+        weight: 4,
+        color: 'calico'
+    };
+    const key = 'CAT';
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    setCart(key, sammy);
+    const newSammy = getCart(key);
+    const localStorageSammy = JSON.parse(localStorage.getItem(key));
+
+    //Assert
+    // Make assertions about what is expected versus the actual result
+
+    // all three of these (sammy, newSammy, localStorageSammy) should be the same if we did our work right
+    assert.deepEqual(sammy, newSammy);
+    assert.deepEqual(newSammy, localStorageSammy)
 });

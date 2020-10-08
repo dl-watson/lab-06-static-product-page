@@ -10,7 +10,6 @@ section {
     margin: 10px;
     background-color: var(--yellow);
 }
-}
 
 p > img {
     height: 200px;
@@ -18,7 +17,7 @@ p > img {
 }
 
 button {
-    margin: 10px;
+    margin: 5px;
 }
 
 .header {
@@ -42,6 +41,14 @@ button {
     justify-content: center;
 }
 
-.product > p {
+button + p {
     margin: 5px;
+}
+
+.cart-nav {
+    margin-top: 20px;
+}
+
+.cart-img {
+    height: 40px;
 }

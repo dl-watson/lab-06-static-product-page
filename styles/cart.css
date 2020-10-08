@@ -30,3 +30,32 @@ tr:nth-child(even) {
     margin: 15px;
     font-family: 'Titillium Web', sans-serif;
 }
+
+.hidden {
+    display: none;
+}
+
+select {
+    width: 60px;
+    text-align: center;
+    margin: 8px;
+}
+
+.prod-nav {
+    margin-top: 20px;
+}
+
+.sub-heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-heading > img, .heading > img {
+    width: 90%;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
