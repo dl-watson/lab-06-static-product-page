@@ -10,7 +10,6 @@ section {
     margin: 10px;
     background-color: var(--yellow);
 }
-}
 
 p > img {
     height: 200px;
@@ -44,4 +43,12 @@ button {
 
 button + p {
     margin: 5px;
+}
+
+.cart-nav {
+    margin-top: 20px;
+}
+
+.cart-img {
+    height: 40px;
 }
