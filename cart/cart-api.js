@@ -7,7 +7,6 @@ export function getCart(key) {
 // sets an item to localStorage in the correct format
 export function setCart(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
-
 }
 
 // clears localStorage

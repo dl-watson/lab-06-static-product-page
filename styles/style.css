@@ -107,3 +107,15 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+hr {
+    width: 100%;
+    margin: 5px;
+}
+
+.navigation-bar {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+
+}

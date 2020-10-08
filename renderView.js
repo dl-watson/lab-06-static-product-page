@@ -3,13 +3,34 @@ import {
     setCart
 } from './cart/cart-api.js';
 
+import { _pokemon, _cart } from './consts.js';
 
-export const _cart = '_cart';
+import { pokemon } from './pokemon.js';
 
 // findById returns the object within a specified array that matches the passed id
 export function findById(givenArray, givenId) {
     return givenArray.filter(item => item.id === givenId)[0];
 }
+
+
+// not 100% on this function
+export function getPokemonFromLocalStorage() {
+
+    // grab pokemon array from localStorage
+    // call it staticPokemon to differentiate
+    let staticPokemon = getCart(_pokemon);
+
+    // if pokemon dne, give the user seeded data
+    if (!staticPokemon) {
+        // set the cart with the static pokemon data
+        setCart(_pokemon, pokemon);
+        staticPokemon = pokemon;
+    }
+    // this val will either be equal to the value of the array in localStorage
+    // or it will be equal to seeded data from the pokemon array
+    return staticPokemon;
+}
+
 
 export function renderPokemon(pokemon) {
 
@@ -25,7 +46,10 @@ export function renderPokemon(pokemon) {
     product.classList.add('product');
     name.textContent = pokemon.name;
     description.textContent = pokemon.description;
+
     image.src = `../assets/${pokemon.id}.png`;
+    image.onerror = "this.onerror=null;this.src='https://i.redd.it/rm6sqwpmesb41.jpg;'";
+
     image.alt = pokemon.id;
     price.textContent = `$${pokemon.price.toFixed(2)}`;
     button.textContent = 'Add to Cart';

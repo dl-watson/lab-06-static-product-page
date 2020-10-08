@@ -1,5 +1,8 @@
 import { findById } from '../renderView.js';
-import { pokemon } from '../pokemon.js';
+// import { pokemon } from '../pokemon.js';
+import { getPokemonFromLocalStorage } from '../renderView.js';
+
+const pokemon = getPokemonFromLocalStorage();
 
 // math helper function
 export function calcLineItem(quantity, amount) {
@@ -8,7 +11,6 @@ export function calcLineItem(quantity, amount) {
 }
 
 export function calcOrderTotal(cartArray) {
-
     let total = 0;
 
     // for each line item in the cart, calculate the total

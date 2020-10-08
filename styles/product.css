@@ -24,6 +24,7 @@ button {
     width: 100%;
     display: flex;
     align-items: center;
+    padding-bottom: 0;
 }
 
 .sub-heading {
@@ -51,4 +52,14 @@ button + p {
 
 .cart-img {
     height: 40px;
+}
+
+.body {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.product > img {
+    height: 240px;
+    width: 240px;
 }
