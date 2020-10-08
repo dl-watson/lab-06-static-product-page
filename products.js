@@ -1,5 +1,5 @@
-import { renderPokemon } from './renderView.js';
-import { pokemon } from './pokemon.js';
+import { renderPokemon } from '../renderView.js';
+import { pokemon } from '../pokemon.js';
 
 
 const anchor = document.getElementById('anchor');

@@ -1,7 +1,7 @@
 import { _cart } from '../renderView.js';
-import { getCart, clearCart } from './cart-api.js';
-import { renderTableRow } from './renderCartView.js';
-import { calcOrderTotal } from './cart-utils.js';
+import { getCart, clearCart } from '../cart/cart-api.js';
+import { renderTableRow } from '../cart/renderCartView.js';
+import { calcOrderTotal } from '../cart/cart-utils.js';
 
 const checkout = document.getElementById('checkout');
 const tableAnchor = document.querySelector('tbody');

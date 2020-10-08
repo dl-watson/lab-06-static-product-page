@@ -51,7 +51,7 @@ export function renderPokemon(pokemon) {
     product.append(name, description, image, price, button, selected);
 
 
-    button.addEventListener("click", () => {
+    button.addEventListener('click', () => {
 
         console.log(`You clicked on: ${pokemon.name}`);
 
