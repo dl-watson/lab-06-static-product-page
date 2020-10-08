@@ -31,7 +31,7 @@ checkout.addEventListener('click', () => {
     clearCart();
 
     // redirect user to homepage
-    window.location.href = '/';
+    window.location.href = '../index.html';
 
 });
 
