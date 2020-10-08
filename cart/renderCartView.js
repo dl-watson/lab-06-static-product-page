@@ -1,7 +1,7 @@
 import { pokemon } from '../pokemon.js';
 import { findById, _cart } from '../renderView.js';
-import { setCart, getCart } from '../cart/cart-api.js';
-import { calcOrderTotal } from '../cart/cart-utils.js';
+import { setCart, getCart } from './cart-api.js';
+import { calcOrderTotal } from './cart-utils.js';
 
 export function renderTableRow(cartItem) {
 
@@ -64,8 +64,3 @@ export function renderTableRow(cartItem) {
 
     return tr;
 }
-
-/*
-
-
-*/

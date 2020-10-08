@@ -1,7 +1,7 @@
 import {
     getCart,
     setCart
-} from '../cart/cart-api.js';
+} from './cart/cart-api.js';
 
 export const _cart = '_cart';
 
