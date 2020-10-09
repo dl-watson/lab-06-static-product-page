@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles/reset.css"> -->
-    <link rel="stylesheet" href="../styles/product.css">
     <link rel="stylesheet" href="../styles/style.css">
-    <title>lab-06-static-PRODUCT-PAGE</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <title>lab-06-static-ADMIN-PAGE</title>
 </head>
 
 <body>
@@ -30,25 +30,38 @@
                 <hr>
                 <div class="navigation-bar">
                     <a href="../index.html">landing page</a>
-                    <a href="/cart/index.html">cart</a>
-                    <a href="../admin/index.html">admin panel</a>
+                    <a href="../cart/index.html">cart</a>
+                    <a href="../products/index.html">products page</a>
                 </div>
                 <hr>
             </section>
-
             <section class="body" id="anchor">
-                <!-- products are generated here -->
-
+                <form id="admin-form">
+                    <label>id 
+                        <input name="id" placeholder="id" value="lickifetchd">
+                    </label>
+                    <label>name 
+                        <input name="name" placeholder="name" value="Lickifetchd">
+                    </label>
+                    <label>image 
+                        <input name="image" placeholder="image" value="lickifetchd.png">
+                    </label>
+                    <label>desc 
+                        <input name="description" placeholder="description" value="fusion of Lickitung and Farfetchd">
+                    </label>
+                    <label>price 
+                        <input name="price" placeholder="price" value=4.99>
+                    </label>
+                    <button class="submit">submit</button>
+                </form>
             </section>
-
         </section>
-
     </main>
     <footer>
-        <div class="copy">with gratitude to <a href="https://pokemon.alexonsager.net/">Pokemon Fusion</a> </div>
+        <!-- <div class="copy">with gratitude to <a href="https://pokemon.alexonsager.net/">Pokemon Fusion</a> </div> -->
     </footer>
 
-    <script type="module" src="../products.js"></script>
+    <script type="module" src="./product-entry.js"></script>
 </body>
 
 </html>

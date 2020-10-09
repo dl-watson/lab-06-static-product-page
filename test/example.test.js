@@ -1,8 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     renderPokemon,
-    findById,
-    calcLineItem
+    findById
 } from '../renderView.js';
 
 import {
@@ -15,8 +14,15 @@ import {
 } from '../cart/renderCartView.js';
 
 import {
-    calcOrderTotal
+    calcOrderTotal,
+    calcLineItem
 } from '../cart/cart-utils.js';
+
+import {
+    _pokemon
+} from '../consts.js';
+
+import { addProduct } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -96,8 +102,7 @@ test('renderTableRow should take in a cart line item and returns a populated DOM
         quantity: 1
     };
 
-    const expected = `<tr><td>Butterduck</td><td>$4.99</td><select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select><td>$4.99</td></tr>`;
-
+    const expected = `<tr><td>Butterduck</td><td>$4.99</td><select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option></select><td>$4.99</td></tr>`;
     const actual = renderTableRow(cartItem);
 
     expect.equal(actual.outerHTML, expected);
@@ -161,4 +166,75 @@ test('getCart and setCart should correctly stringify and set things in local sto
     // all three of these (sammy, newSammy, localStorageSammy) should be the same if we did our work right
     assert.deepEqual(sammy, newSammy);
     assert.deepEqual(newSammy, localStorageSammy)
+});
+
+test('addProduct should take in a product object and add it to local storage (returning nothing)', (expect) => {
+    const newPokemon = {
+        name: 'starbok',
+        price: 2.99
+    };
+    const expectation = [
+        {
+            id: 'butterduck',
+            name: 'Butterduck',
+            image: '../assets/butterduck.png',
+            description: 'fusion of Butterfree and Psyduck',
+            category: 'pokemon',
+            price: 4.99
+        },
+        {
+            id: 'chanchoke',
+            name: 'Chanchoke',
+            image: '../assets/chanchoke.png',
+            description: 'fusion of Chansey and Machoke',
+            category: 'pokemon',
+            price: 5.99
+        },
+        {
+            id: 'mrcruel',
+            name: 'Mr. Cruel',
+            image: '.../assets/mrcruel.png',
+            description: 'fusion of Mr. Mime and Tentacruel',
+            category: 'pokemon',
+            price: 12.99
+        },
+        {
+            id: 'slowlithe',
+            name: 'Slowlithe',
+            image: '../assets/slowlithe.png',
+            description: 'fusion of Slowpoke and Growlithe',
+            category: 'pokemon',
+            price: 1.99
+        },
+        {
+            id: 'wigglywrath',
+            name: 'Wigglywrath',
+            image: '../assets/wigglywrath.png',
+            description: 'fusion of Wigglytuff and Poliwrath',
+            category: 'pokemon',
+            price: 6.99
+        },
+        {
+            id: 'weepinduo',
+            name: 'Weepinduo',
+            image: '../assets/weepinduo.png',
+            description: 'fusion of Weepinbell and Doduo',
+            category: 'pokemon',
+            price: 0.99
+        },
+        {
+            name: 'starbok',
+            price: 2.99
+        }
+    ];
+
+    //Arrange
+    // Set up your arguments and expectations    //Act 
+    // Call the function you're testing and set the result to a const
+    addProduct(newPokemon);
+
+    const check_localStorage = getCart(_pokemon);
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(expectation, check_localStorage);
 });

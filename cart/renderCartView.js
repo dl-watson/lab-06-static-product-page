@@ -1,7 +1,11 @@
-import { pokemon } from '../pokemon.js';
-import { findById, _cart } from '../renderView.js';
+// import { pokemon } from '../pokemon.js';
+import { findById, getPokemonFromLocalStorage } from '../renderView.js';
+import { _cart } from '../consts.js';
 import { setCart, getCart } from './cart-api.js';
 import { calcOrderTotal } from './cart-utils.js';
+
+const pokemon = getPokemonFromLocalStorage();
+
 
 export function renderTableRow(cartItem) {
 
@@ -69,3 +73,13 @@ export function renderTableRow(cartItem) {
 
     return tr;
 }
+
+// Your function will need to:
+
+// Retrieve the existing products array
+// Push the new product into the array
+// Re-save the products array into localStorage
+// Your test will:
+
+// Add the product using your function
+// Examine the PRODUCT notch in localStorage. Use deepEqual to check that the product is now in localStorage.

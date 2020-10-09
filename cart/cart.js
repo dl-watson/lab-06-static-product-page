@@ -1,4 +1,4 @@
-import { _cart } from '../renderView.js';
+import { _cart } from '../consts.js';
 import { getCart, clearCart } from './cart-api.js';
 import { renderTableRow } from './renderCartView.js';
 import { calcOrderTotal } from './cart-utils.js';
