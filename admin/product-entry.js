@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
         price: Number(price)
     };
 
-    // get localStorage
+    // add to localStorage
     addProduct(newPokemon);
 
 });
