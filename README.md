@@ -12,6 +12,8 @@ current goals:
 
 - refactor and reorganize code (current state of renderView functions make me want to scream)
 
+- better solution for not-found image added from admin panel
+
 ---
 
 Step 2: TDD API Method for Add Product

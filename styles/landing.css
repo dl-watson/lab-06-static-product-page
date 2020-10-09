@@ -1,3 +1,7 @@
 section {
     padding-bottom: var(--gutter);
 }
+
+.landing-img {
+    width: 100%;
+}

@@ -1,6 +1,4 @@
-import { _pokemon } from '../consts.js';
-import { getPokemonFromLocalStorage } from '../renderView.js';
-import { setCart } from '../cart/cart-api.js';
+import { addProduct } from '../utils.js';
 
 // create a reference to the HTML form
 const form = document.querySelector('form');
@@ -32,18 +30,7 @@ form.addEventListener('submit', (e) => {
         price: Number(price)
     };
 
-    console.log(newPokemon);
-
     // get localStorage
-    const staticPokemon = getPokemonFromLocalStorage();
-
-    console.log(staticPokemon);
-
-    // push this new object into our products array
-    staticPokemon.push(newPokemon);
-    // stringify the result and set localStorage
-    setCart(_pokemon, staticPokemon);
-
-    // clear the form
+    addProduct(newPokemon);
 
 });

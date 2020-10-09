@@ -48,8 +48,6 @@ export function renderPokemon(pokemon) {
     description.textContent = pokemon.description;
 
     image.src = `../assets/${pokemon.id}.png`;
-    image.onerror = "this.onerror=null;this.src='https://i.redd.it/rm6sqwpmesb41.jpg;'";
-
     image.alt = pokemon.id;
     price.textContent = `$${pokemon.price.toFixed(2)}`;
     button.textContent = 'Add to Cart';

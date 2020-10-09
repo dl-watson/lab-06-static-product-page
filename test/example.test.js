@@ -22,6 +22,8 @@ import {
     _pokemon
 } from '../consts.js';
 
+import { addProduct } from '../utils.js';
+
 const test = QUnit.test;
 
 // set up some hard coded data
