@@ -33,7 +33,7 @@ if (cart.length === 0) {
 // checkout button that acts as a refresh/localStorage wipe
 checkout.addEventListener('click', () => {
     // displays contents of cart
-    alert(JSON.stringify(cart, true, 2));
+    alert(cart, true, 2);
 
     // clears localStorage
     clearCart();
