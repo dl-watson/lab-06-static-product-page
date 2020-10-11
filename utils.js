@@ -1,6 +1,6 @@
-import { getPokemonFromLocalStorage } from '../renderView.js';
-import { setCart } from '../cart/cart-api.js';
-import { _pokemon } from '../consts.js';
+import { getPokemonFromLocalStorage } from './renderView.js';
+import { setCart } from './cart/cart-api.js';
+import { _pokemon } from './consts.js';
 
 export function addProduct(obj) {
 
